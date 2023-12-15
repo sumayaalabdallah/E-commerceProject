@@ -1,0 +1,430 @@
+
+ [
+    {
+      "id": 1,
+      "image": "./src/assets/winter1.jpg",
+      "title": "Apple white jacket",
+      "description": "The jacket comes with a full-length zipper for easy wear and removal, and two side pockets for added functionality. The ribbed cuffs and hem provide a snug fit, keeping you warm and cozy.",
+      "price": 240,
+      "star": "⭐⭐",
+      "count":0
+    },
+    {
+        "id": 2,
+        "image": "./src/assets/winter2.jpg",
+        "title": "One color cotton t-shirt",
+        "description": "This exquisite white blouse is a perfect addition to your wardrobe. Crafted with soft, breathable fabric, it ensures comfort and style ",
+        "price": 150,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 3,
+        "image": "./src/assets/winter3.jpg",
+        "title": "maroon sweater for Men",
+        "description": "This exquisite red blouse is a perfect addition to your wardrobe. Crafted with soft, breathable fabric, it ensures comfort and style",
+        "price": 300,
+        "star": "⭐⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 4,
+        "image": "./src/assets/winter4.jpg",
+        "title": "louse cotton tops",
+        "description": " brown tuffle coat, hooded fur coat, , matted brown fur, light brown coat, tuffle coat, brown jacket with long sleeves, dark brown duster.",
+        "price": 350,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 5,
+        "image": "./src/assets/winter5.jpg",
+        "title": "louse cotton tops",
+        "description": "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu.",
+        "price": 39,
+        "star": "⭐",
+        "count":0
+      },
+      {
+        "id": 6,
+        "image": "./src/assets/winter6.jpg",
+        "title": "bag for women",
+        "description": "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu.",
+        "price": 100,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 7,
+        "image": "./src/assets/winter7.jpg",
+        "title": "Alpaca Wool Coat",
+        "description": "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu.",
+        "price": 200,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 8,
+        "image": "./src/assets/winter8.jpg",
+        "title": "Beanies Stylish Hats",
+        "description": "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu.",
+        "price": 20,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 9,
+        "image": "./src/assets/summer1.jpg",
+        "title": "Men’s blue cotton t-shirt",
+        "description": "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu.",
+        "price": 85,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 10,
+        "image": "./src/assets/summer2.jpg",
+        "title": "black clean t-shirt",
+        "description": "Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu.",
+        "price": 74,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 11,
+        "image": "./src/assets/summer3.jpg",
+        "title": "Men’s black stylish half shirt",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price":121,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 12,
+        "image": "./src/assets/summer4.jpg",
+        "title": "Men’s casual cotton t-shirt",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 67,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 13,
+        "image": "./src/assets/summer5.jpg",
+        "title": "Men’s cross check shirt",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 89,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 14,
+        "image": "./src/assets/summer6.jpg",
+        "title": "stylish sun glass",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 250,
+        "star": "⭐",
+        "count":0
+      },
+      {
+        "id": 15,
+        "image": "./src/assets/summer7.jpg",
+        "title": "trendy dress for women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 110,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 16,
+        "image": "./src/assets/summer8.jpg",
+        "title": "Beanies Stylish Hats",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 77,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 17,
+        "image": "./src/assets/summer9.jpg",
+        "title": "Full sleeve cotton t-shirt",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 87,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 18,
+        "image": "./src/assets/summer10.jpg",
+        "title": "Ladies complete blazer suit",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 234,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 19,
+        "image": "./src/assets/summer11.jpg",
+        "title": "Men’s full sleeve t-shirt",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 123,
+        "star": "⭐",
+        "count":0
+      },
+      {
+        "id": 20,
+        "image": "./src/assets/summer12.jpg",
+        "title": "Men’s complete blazer suit",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 66,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 21,
+        "image": "./src/assets/bag1.jpg",
+        "title": "The Luxe Leather Tote Bag",
+        "description": "Crafted with genuine top-grain leather, this spacious tote exudes timeless elegance while offering practical functionality.  ",
+        "price": 85,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 22,
+        "image": "./src/assets/bag2.jpg",
+        "title": "Bag For Women",
+        "description": "This is a stylish and modern handbag in blue. It has a simple and elegant design, with a sturdy handle and adjustable shoulder strap for comfort and flexibility.",
+        "price": 100,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 23,
+        "image": "./src/assets/bag3.jpg",
+        "title": "Bag For Women",
+        "description": "This is a stylish and modern handbag in mix colors. It has a simple and elegant design, with a sturdy handle and adjustable shoulder strap for comfort and flexibility",
+        "price": 92,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 24,
+        "image": "./src/assets/bag4.jpg",
+        "title": "Bag For Women",
+        "description": "This is a modern bag, perfect for both work and travel. It's made from high-quality, durable materials, ensuring it can withstand daily use. ",
+        "price": 110,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 25,
+        "image": "./src/assets/bag5.jpg",
+        "title": "Bag For Women",
+        "description": "This is a stylish and modern handbag in brown color. It has a simple and elegant design, with a sturdy handle and adjustable shoulder strap for comfort and flexibility",
+        "price": 60,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 26,
+        "image": "./src/assets/bag6.jpg",
+        "title": "Bag For Women",
+        "description": "This is a stylish and modern handbag in black color. It has a simple and elegant design, with a sturdy handle.",
+        "price": 44,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 27,
+        "image": "./src/assets/bag7.jpg",
+        "title": "Bag For Women",
+        "description": "This is a stylish and modern handbag in black color. It has a simple and elegant design, with a sturdy handle and adjustable shoulder strap for comfort and flexibility",
+        "price": 95,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+     
+      {
+        "id": 28,
+        "image": "./src/assets/sneakers2.jpg",
+        "title": "sneakers For Men and Women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 102,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 29,
+        "image": "./src/assets/sneakers3.jpg",
+        "title": "High heels for women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 140,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 30,
+        "image": "./src/assets/sneakers6.jpg",
+        "title": "Sneakers For Men and Women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 150,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 31,
+        "image": "./src/assets/sneakers7.jpg",
+        "title": "Sneakers For Men",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 130,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 32,
+        "image": "./src/assets/sneakers8.jpg",
+        "title": "High heels for women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 175,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 33,
+        "image": "./src/assets/sneakers9.jpg",
+        "title": "High heels for women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 150,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+     
+      {
+        "id": 34,
+        "image": "./src/assets/sneakers11.jpg",
+        "title": "sneakers For Women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 120,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 35,
+        "image": "./src/assets/sneakers12.jpg",
+        "title": "Sneakers For Women",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
+        "price": 100,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 36,
+        "image": "./src/assets/watch1.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 150,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 37,
+        "image": "./src/assets/watch2.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 115,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 38,
+        "image": "./src/assets/watch3.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 85,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 39,
+        "image": "./src/assets/watch4.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 77,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 40,
+        "image": "./src/assets/watch5.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 99,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 41,
+        "image": "./src/assets/watch6.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 140,
+        "star": "⭐⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 42,
+        "image": "./src/assets/watch10.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 69,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 43,
+        "image": "./src/assets/watch13.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 76,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 44,
+        "image": "./src/assets/watch14.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 120,
+        "star": "⭐⭐",
+        "count":0
+      },
+      {
+        "id": 45,
+        "image": "./src/assets/watch16.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 190,
+        "star": "⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 46,
+        "image": "./src/assets/watch17.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 83,
+        "star": "⭐⭐⭐⭐",
+        "count":0
+      },
+      {
+        "id": 47,
+        "image": "./src/assets/watch18.jpg",
+        "title": "Elegant Luxury Watch",
+        "description": "Crafted with a high-grade stainless steel case, it features a sleek black dial with luminous hands and hour markers for easy time reading",
+        "price": 55,
+        "star": "⭐⭐⭐",
+        "count":0
+      }
+      
+     
+]
