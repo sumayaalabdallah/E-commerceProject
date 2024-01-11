@@ -107,7 +107,7 @@ export default {
   font-size: 20px !important;
 }
 .v-app-bar {
-  background-color: #ecf5f4a7 !important;
+  background-color: #ecf5f46f !important;
   backdrop-filter: blur(20px) !important;
 }
 </style>

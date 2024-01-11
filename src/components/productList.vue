@@ -13,11 +13,15 @@ const paginatedProducts = computed(() => {
   const end = currentPage.value * pageSize;
   return products.value.slice(start, end);
 });
-fetch("../../file.json")
-  .then((res) => res.json())
-  .then((items) => {
-    products.value = items;
-  });
+(async function dataFetcher() {
+  let response = await fetch("../../file.json");
+  products.value = await response.json();
+})();
+// fetch("../../file.json")
+//   .then((res) => res.json())
+//   .then((items) => {
+//     products.value = items;
+//   });
 </script>
 
 <template>
