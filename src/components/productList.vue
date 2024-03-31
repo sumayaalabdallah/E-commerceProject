@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import ProductCard from "@/components/productCard.vue";
 import { reactive } from "vue";
-const products = ref([]);
+// const products = ref([]);
 const data = reactive({
   products: [],
 });
