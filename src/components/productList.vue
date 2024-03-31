@@ -25,7 +25,6 @@ const paginatedProducts = computed(() => {
 
 products.value = productsValues;
 </script>
-
 <template>
   <section class="my-16">
     <v-container>
