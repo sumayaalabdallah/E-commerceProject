@@ -1,11 +1,11 @@
 <script setup>
 import { ref, computed } from "vue";
 import ProductCard from "@/components/productCard.vue";
-import { reactive } from "vue";
-// const products = ref([]);
-const data = reactive({
-  products: [],
-});
+// import { reactive } from "vue";
+const products = ref([]);
+// const data = reactive({
+//   products: [],
+// });
 const currentPage = ref(1);
 const pageSize = 8;
 const handlePageChange = (newPage) => {
@@ -14,18 +14,18 @@ const handlePageChange = (newPage) => {
 const paginatedProducts = computed(() => {
   const start = (currentPage.value - 1) * pageSize;
   const end = currentPage.value * pageSize;
-  return data.products.value.slice(start, end);
+  return products.value.slice(start, end);
 });
-// fetch("../../public/file.json")
-//   .then((res) => res.json())
-//   .then((items) => {
-//     products.value = items;
-//   });
-fetch("../../file.json")
+fetch("../../public/file.json")
   .then((res) => res.json())
   .then((items) => {
-    data.products = items;
+    products.value = items;
   });
+// fetch("../../file.json")
+//   .then((res) => res.json())
+//   .then((items) => {
+//     data.products = items;
+//   });
 </script>
 <template>
   <section class="my-16">
