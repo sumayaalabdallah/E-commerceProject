@@ -14,7 +14,7 @@ const handlePageChange = (newPage) => {
 const paginatedProducts = computed(() => {
   const start = (currentPage.value - 1) * pageSize;
   const end = currentPage.value * pageSize;
-  return products.value.slice(start, end);
+  return data.products.value.slice(start, end);
 });
 // fetch("../../public/file.json")
 //   .then((res) => res.json())
