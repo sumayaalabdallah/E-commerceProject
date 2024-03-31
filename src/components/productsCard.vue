@@ -1,15 +1,21 @@
 <script setup>
 import ProductCard from "../components/productCard.vue";
 import { reactive } from "vue";
+// const products = ref([]);
 const data = reactive({
   products: [],
   productToShow: 8,
 });
-fetch("../../public/file.json")
+// (async function dataFetcher() {
+//   let response = await fetch("../../file.json");
+//   products.value = await response.json();
+// })();
+fetch("../../file.json")
   .then((res) => res.json())
   .then((items) => {
     data.products = items;
   });
+
 const loadMoreProducts = () => {
   if (data.productToShow >= data.products.length) {
     return;
