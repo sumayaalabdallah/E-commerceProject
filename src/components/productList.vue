@@ -1,7 +1,11 @@
 <script setup>
 import { ref, computed } from "vue";
 import ProductCard from "@/components/productCard.vue";
+import { reactive } from "vue";
 const products = ref([]);
+const data = reactive({
+  products: [],
+});
 const currentPage = ref(1);
 const pageSize = 8;
 const handlePageChange = (newPage) => {
@@ -12,10 +16,15 @@ const paginatedProducts = computed(() => {
   const end = currentPage.value * pageSize;
   return products.value.slice(start, end);
 });
-fetch("../../public/file.json")
+// fetch("../../public/file.json")
+//   .then((res) => res.json())
+//   .then((items) => {
+//     products.value = items;
+//   });
+fetch("../../file.json")
   .then((res) => res.json())
   .then((items) => {
-    products.value = items;
+    data.products = items;
   });
 </script>
 <template>

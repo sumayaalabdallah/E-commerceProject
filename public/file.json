@@ -2,7 +2,7 @@
  [
     {
       "id": 1,
-      "image": "../src/assets/winter1.jpg",
+      "image": "./images/winter1.jpg",
       "title": "Apple white jacket",
       "description": "The jacket comes with a full-length zipper for easy wear and removal, and two side pockets for added functionality. The ribbed cuffs and hem provide a snug fit, keeping you warm and cozy.",
       "price": 240,
