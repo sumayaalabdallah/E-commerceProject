@@ -11,10 +11,16 @@ import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
-
+// Translations provided by Vuetify
+import { ar, en } from 'vuetify/locale'
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 
 export default createVuetify({
+  locale: {
+    locale: 'en',
+    fallback: 'ar',
+    messages: { en, ar },
+  },
   theme: {
     // defaultTheme:'dark',
     themes: {

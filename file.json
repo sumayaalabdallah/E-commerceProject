@@ -93,7 +93,7 @@
       {
         "id": 11,
         "image": "./src/assets/summer3.jpg",
-        "title": "Men’s black stylish half shirt",
+        "title": "Men’s black half shirt",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price":121,
         "star": "⭐⭐⭐⭐",
@@ -102,7 +102,7 @@
       {
         "id": 12,
         "image": "./src/assets/summer4.jpg",
-        "title": "Men’s casual cotton t-shirt",
+        "title": "Men’s casual t-shirt",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price": 67,
         "star": "⭐⭐⭐",
@@ -147,7 +147,7 @@
       {
         "id": 17,
         "image": "./src/assets/summer9.jpg",
-        "title": "Full sleeve cotton t-shirt",
+        "title": "Full sleeve t-shirt",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price": 87,
         "star": "⭐⭐",
@@ -156,7 +156,7 @@
       {
         "id": 18,
         "image": "./src/assets/summer10.jpg",
-        "title": "Ladies complete blazer suit",
+        "title": "Ladies complete suit",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price": 234,
         "star": "⭐⭐⭐⭐",
@@ -165,7 +165,7 @@
       {
         "id": 19,
         "image": "./src/assets/summer11.jpg",
-        "title": "Men’s full sleeve t-shirt",
+        "title": "full sleeve t-shirt",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price": 123,
         "star": "⭐",
@@ -174,7 +174,7 @@
       {
         "id": 20,
         "image": "./src/assets/summer12.jpg",
-        "title": "Men’s complete blazer suit",
+        "title": "Men’s complete suit",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price": 66,
         "star": "⭐⭐⭐",
@@ -247,7 +247,7 @@
       {
         "id": 28,
         "image": "./src/assets/sneakers2.jpg",
-        "title": "sneakers For Men and Women",
+        "title": "sneakers For Women",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price": 102,
         "star": "⭐⭐⭐⭐",
@@ -265,7 +265,7 @@
       {
         "id": 30,
         "image": "./src/assets/sneakers6.jpg",
-        "title": "Sneakers For Men and Women",
+        "title": "Sneakers For Men",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut s",
         "price": 150,
         "star": "⭐⭐⭐",

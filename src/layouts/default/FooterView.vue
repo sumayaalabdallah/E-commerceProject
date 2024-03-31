@@ -1,8 +1,8 @@
 <script></script>
 <template>
   <section class="mt-16">
-    <v-footer class="mt-16" color="#4a5556">
-      <v-container class="my-6">
+    <v-footer class="mt-16" color="#ecf5f4">
+      <v-container>
         <v-row no-gutters>
           <v-col cols="12" sm="6" lg="3" align-self="start">
             <v-img
@@ -43,7 +43,7 @@
           </v-col>
           <v-col cols="12" sm="6" lg="3" align-self="start">
             <ul>
-              <h1>Address</h1>
+              <h1 class="ml-4">Address</h1>
               <li>
                 <v-icon size="1.5rem" class="mx-2">mdi-map-marker</v-icon
                 ><span>20, Awesome Road, New York</span>
@@ -88,42 +88,13 @@
               </li>
             </ul>
           </v-col>
-          <v-divider color="#bbbdc4" class="border-opacity-75 my-6"></v-divider>
+          <v-divider color="#bbbdc4" class="border-opacity-75 my-8"></v-divider>
           <p>
             Copyright ©
             {{ new Date().getFullYear() }} by
             <strong> Sumaya Alabdallah</strong>
           </p>
         </v-row>
-        <!--
-    <ul class="social-icons ">
-              <li>
-                <a href="https://github.com/sumayaalabdallah">
-                  <i class="fa-brands fa-github fa-xl"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/sumaya-alabdallah-4aa51b276"
-                >
-                  <i class="fa-brands fa-linkedin-in fa-xl"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/somya.alabdllah.3?mibextid=D4KYlr"
-                >
-                  <i class="fa-brands fa-facebook fa-xl"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/sumaya_alabdallah?igshid=OGQ5ZDc2ODk2ZA=="
-                >
-                  <i class="fa-brands fa-instagram fa-xl"></i>
-                </a>
-              </li>
-            </ul> -->
       </v-container>
     </v-footer>
   </section>
@@ -140,8 +111,9 @@ h1 {
 p,
 span {
   font-size: 16px;
-  font-weight: 400;
-  color: #bbbdc4;
+  font-weight: 500;
+  color: #4a5556;
+
   text-decoration: none;
 }
 ul {

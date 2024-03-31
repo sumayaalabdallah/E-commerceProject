@@ -1,20 +1,24 @@
 import {defineStore} from "pinia";
 import {ref} from "vue";
-
-
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 export const useCartStore = defineStore('cart', () => {
   const items = ref(JSON.parse(localStorage.getItem('cartItems')) ?? [])
-  // const items = ref([])
-
-
   const addItem = item => {
     const existingProduct = items.value.find(cartItem => cartItem.id === item.id);
     if (existingProduct) {
       existingProduct.count++;
+      toast.success("Your Item has been updated", {
+        autoClose: 1500,
+      });
     } else {
       item.count = 1;
-      items.value.push(item)
+      items.value.push(item);
+      toast.success("Your Item has been saved", {
+        autoClose: 1500,
+      });
     }
+
     localStorage.setItem('cartItems', JSON.stringify(items.value))
   }
   const removeItem = (product) => {
@@ -24,7 +28,32 @@ export const useCartStore = defineStore('cart', () => {
     localStorage.setItem('cartItems', JSON.stringify(items.value))
   }
 
-  return {items, addItem, removeItem}
+  const incrementQ = item => {
+    const existingProduct = items.value.find(cartItem => cartItem.id === item.id);
+    if (existingProduct) {
+      existingProduct.count++;
+    }
+    toast.success("Your Item has been updated", {
+      autoClose: 1500,
+    });
+    localStorage.setItem('cartItems', JSON.stringify(items.value))
+  }
+   const decrementQ =item => {
+
+    const indexToBeDeleted = items.value.find(cartItem => cartItem.id === item.id);
+    if (indexToBeDeleted) {
+      indexToBeDeleted.count--;
+   if(indexToBeDeleted.count === 0){
+    removeItem(item)
+    }
+    }
+    toast.success("Your Item has been updated", {
+      autoClose: 1500,
+    });
+    localStorage.setItem('cartItems', JSON.stringify(items.value))
+  }
+
+  return {items, addItem, removeItem,incrementQ,decrementQ}
 }, {
   persist: true,
 })

@@ -1,38 +1,78 @@
-// Utilities
+// // Utilities
+
+// import { defineStore } from "pinia";
+
+// export default defineStore('user', {
+//   persist: true,
+//   state: () => ({
+//    user:{},
+//   }),
+
+//   getters: {
+//     isLoggedIn(state){
+//         return !!state.user.token
+//     },
+//     isAdmin(state){
+//         return state.user.username === 'sumaya'
+//     }
+//   },
+
+//   actions: {
+//     login(username,password) {
+//         fetch("https://dummyjson.com/auth/login", {
+//           method: "POST",
+//           headers: { "Content-Type": "application/json" },
+//           body: JSON.stringify({
+//             username: username,
+//             password: password,
+//             // expiresInMins: 60, // optional
+//           }),
+//         })
+//           .then(res => res.json())
+//           .then(user => this.user= user);
+//     },
+//     logout() {
+//       this.user={};
+//     }
+//   }
+// });
+// /store/user.js
 
 import { defineStore } from "pinia";
 
-export default defineStore('user', {
-  persist: true,
+export const useUserStore = defineStore("user", {
   state: () => ({
-   user:{},
+    user: null,
   }),
 
-  getters: {
-    isLoggedIn(state){
-        return !!state.user.token
-    },
-    isAdmin(state){
-        return state.user.username === 'sumaya'
-    }
-  },
-
   actions: {
-    login(username,password) {
-        fetch("https://dummyjson.com/auth/login", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            username: username,
-            password: password,
-            // expiresInMins: 60, // optional
-          }),
-        })
-          .then(res => res.json())
-          .then(user => this.user= user);
+    async fetchUser() {
+      const res = await fetch("http://localhost:3000/user");
+
+      const user = await res.json();
+      this.user = user;
     },
-    logout() {
-      this.user={};
-    }
-  }
+    async signUp(email, password) {
+      const res = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      const user = await res.json()
+      this.user = user;
+    },
+    async signIn(email, password) {
+      const res = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      const user = await res.json();
+      this.user = user;
+    },
+  },
 });

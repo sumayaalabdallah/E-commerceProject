@@ -1,68 +1,68 @@
 <template>
-  <v-app-bar style="box-shadow: 5px 5px 10px #4a5556" class="py-1">
-    <v-container>
-      <v-row>
-        <v-col cols="12" md="4" class="hidden-sm-and-down">
-          <div class="ma-3">
-            <img
-              class=""
-              src="../../assets/download.png"
-              width="150"
-              alt="logo"
-            />
-          </div>
-        </v-col>
+  <v-app-bar>
+    <v-app-bar-nav-icon
+      color="blue-grey-lighten-2"
+      @click="drawer = !drawer"
+    ></v-app-bar-nav-icon>
 
-        <v-col cols="12" md="4">
-          <div class="d-flex justify-space-around ma-6">
-            <router-link class="text-h6 link-color" to="/">Home</router-link>
-            <router-link class="text-h6 link-color" to="/About"
-              >About</router-link
-            >
-            <router-link class="text-h6 link-color" to="/Product"
-              >Product</router-link
-            >
-
-            <a
-              style="cursor: pointer"
-              @click="scrollMethod"
-              class="text-h6 link-color"
-              >Contact</a
-            >
-          </div>
-        </v-col>
-        <v-col cols="12" md="4" class="hidden-sm-and-down">
-          <div class="d-flex justify-end ma-4">
-            <v-btn to="/Cart" icon color="#589195">
-              <v-badge
-                location="right top"
-                :content="counter"
-                color="blue-grey-lighten-2"
-                offset-x="-5"
-              >
-                <v-icon>mdi-cart</v-icon>
-              </v-badge>
-            </v-btn>
-            <v-btn to="/Likes" icon color="#589195">
-              <v-icon>mdi-heart</v-icon>
-            </v-btn>
-            <v-btn to="/login" icon color="#589195">
-              <v-icon>mdi-account</v-icon>
-            </v-btn>
-            <v-btn icon color="#589195" @click="toggleTheme()"
-              ><v-icon>mdi mdi-brightness-4 </v-icon></v-btn
-            >
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
+    <div class="d-flex justify-end ma-4">
+      <v-btn to="/Cart" icon color="#589195">
+        <v-badge
+          location="right top"
+          :content="counter"
+          color="blue-grey-lighten-2"
+          offset-x="-5"
+        >
+          <v-icon>mdi-cart</v-icon>
+        </v-badge>
+      </v-btn>
+      <v-btn to="/Likes" icon color="#589195">
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+      <!-- <v-btn to="/login" icon color="#589195">
+        <v-icon>mdi-account</v-icon>
+      </v-btn> -->
+      <v-btn icon color="#589195" @click="changeLocale"
+        ><v-icon>{{
+          this.$vuetify.locale.current === "ar"
+            ? "mdi mdi-abjad-arabic"
+            : "mdi mdi-alphabetical-variant"
+        }}</v-icon></v-btn
+      >
+      <v-btn icon color="#589195" @click="toggleTheme()"
+        ><v-icon>mdi mdi-brightness-4 </v-icon></v-btn
+      >
+    </div>
+    <v-spacer></v-spacer>
+    <img
+      class="logo mx-10"
+      src="../../assets/download.png"
+      width="150"
+      alt="logo"
+    />
   </v-app-bar>
+  <v-navigation-drawer v-model="drawer">
+    <v-list nav>
+      <v-list-item class="link-color" :to="{ name: 'Home' }">{{
+        $t("appbar.home")
+      }}</v-list-item>
+      <v-list-item class="link-color" :to="{ name: 'About' }">{{
+        $t("appbar.about")
+      }}</v-list-item>
+      <v-list-item class="link-color" :to="{ name: 'Product' }">{{
+        $t("appbar.products")
+      }}</v-list-item>
+      <v-list-item class="link-color" @click="scrollMethod">{{
+        $t("appbar.contact")
+      }}</v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 
 <script>
 import { useCartStore } from "@/store/cart.js";
 import { useTheme } from "vuetify";
-
+import i18n from "@/plugins/i18n";
 export default {
   data() {
     const theme = useTheme();
@@ -76,6 +76,7 @@ export default {
       counter: 0,
       theme,
       toggleTheme,
+      drawer: false,
     };
   },
   created() {
@@ -87,6 +88,11 @@ export default {
     }, 1000);
   },
   methods: {
+    changeLocale() {
+      this.$vuetify.locale.current =
+        this.$vuetify.locale.current === "en" ? "ar" : "en";
+      i18n.global.locale = i18n.global.locale === "en" ? "ar" : "en";
+    },
     scrollMethod() {
       this.$nextTick(() =>
         document
@@ -97,17 +103,28 @@ export default {
   },
 };
 </script>
+<!-- <script setup>
+import { useCartStore } from "@/store/cart.js";
+const cart=useCartStore();
+cart.items.length ====> counter
+</script> -->
 <style scoped>
 .link-color {
   color: #589195;
-  text-decoration: none;
-  text-align: left !important;
-  font-family: monospace !important;
-  font-weight: 500 !important;
-  font-size: 20px !important;
 }
 .v-app-bar {
   background-color: #ecf5f46f !important;
   backdrop-filter: blur(20px) !important;
+}
+@media (max-width: 500px) {
+  .logo {
+    width: 110px;
+    margin-left: 2px !important;
+  }
+}
+@media (max-width: 380px) {
+  .logo {
+    display: none;
+  }
 }
 </style>

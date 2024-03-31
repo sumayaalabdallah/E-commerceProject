@@ -33,7 +33,9 @@ export default {
   color: #fff;
   background: #4db6ac;
   cursor: pointer;
+  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf;
 }
+
 @media (max-width: 900px) {
   .back-to-top {
     width: 12%;

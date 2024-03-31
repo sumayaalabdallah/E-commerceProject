@@ -23,6 +23,7 @@
         <v-row justify="center">
           <v-col cols="12" md="7">
             <v-text-field
+              type="text"
               label="Your Name"
               bg-color="#ecf5f4"
               color="#34394c"
@@ -32,6 +33,7 @@
 
           <v-col cols="12" md="7">
             <v-text-field
+              type="email"
               label="Your Email"
               bg-color="#ecf5f4"
               color="#34394c"
@@ -41,6 +43,7 @@
 
           <v-col cols="12" md="7">
             <v-text-field
+              type="text"
               label="Subject"
               bg-color="#ecf5f4"
               color="#34394c"
@@ -49,6 +52,8 @@
           </v-col>
           <v-col cols="12" md="7">
             <v-textarea
+              :rows="5"
+              type="text"
               bg-color="#ecf5f4"
               color="#34394c"
               label="Message"
@@ -110,6 +115,10 @@
   font-weight: 500;
   font-family: system-ui;
   padding: 0 1.1rem;
+}
+.btn:hover {
+  background-color: #4db6ac !important;
+  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf !important;
 }
 .social-icons li {
   margin-right: 2.5rem;

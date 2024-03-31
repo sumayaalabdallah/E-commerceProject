@@ -39,7 +39,13 @@ export default {
 </script>
 <template>
   <section class="my-6" id="home">
-    <v-carousel cycle show-arrows="hover" hide-delimiters height="auto">
+    <v-carousel
+      cycle
+      show-arrows="hover"
+      hide-delimiters
+      height="auto"
+      interval="3000"
+    >
       <v-carousel-item v-for="s in sliders" :key="s.id">
         <v-container
           class="my-6"
@@ -260,6 +266,10 @@ export default {
   background-color: #3e9aa3;
   color: white;
   margin-bottom: 5rem !important;
+}
+.btn:hover {
+  background-color: #4db6ac !important;
+  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf !important;
 }
 p {
   color: #34394c;

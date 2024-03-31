@@ -2,12 +2,9 @@
 import { useLikeStore } from "@/store/likes";
 import { computed } from "vue";
 import ProductCard from "@/components/productCard.vue";
-
 const likes = useLikeStore();
-
 const products = computed(() => likes.items);
 </script>
-
 <template>
   <section class="my-10" id="home">
     <VContainer>
@@ -21,11 +18,18 @@ const products = computed(() => likes.items);
         >
           <ProductCard :product="product">
             <template #actions>
-              <VBtn
-                icon="mdi-delete"
-                color="error"
-                @click="likes.removeItem(product)"
-              />
+              <span>
+                <VBtn
+                  icon="mdi-delete"
+                  color="red-darken-3"
+                  variant="tonal"
+                  @click="likes.removeItem(product)"
+                  size="40"
+                />
+                <v-tooltip activator="parent" location="bottom" offset="20"
+                  >Delete this Product ?</v-tooltip
+                >
+              </span>
             </template>
           </ProductCard>
         </VCol>

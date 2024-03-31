@@ -4,7 +4,6 @@ import ProductCard from "@/components/productCard.vue";
 const products = ref([]);
 const currentPage = ref(1);
 const pageSize = 8;
-
 const handlePageChange = (newPage) => {
   currentPage.value = newPage;
 };
@@ -49,6 +48,11 @@ const paginatedProducts = computed(() => {
       >
         Showing our latest arrival on this summer
       </p>
+      <v-chip color="#589195" variant="outlined" class="mr-2">Clothes</v-chip>
+      <v-chip color="#589195" variant="outlined" class="mr-2">Bags</v-chip>
+      <v-chip color="#589195" variant="outlined" class="mr-2">Shoes</v-chip>
+      <v-chip color="#589195" variant="outlined">Watches</v-chip>
+
       <v-row class="my-4">
         <v-col
           v-for="(product, index) in paginatedProducts"
@@ -60,13 +64,17 @@ const paginatedProducts = computed(() => {
           <ProductCard :product="product" />
         </v-col>
       </v-row>
-      <v-pagination
-        v-model="currentPage"
-        :length="Math.ceil(products.length / pageSize)"
-        class="mt-10"
-        rounded="circle"
-        @input="handlePageChange"
-      ></v-pagination>
+      <v-col cols="12">
+        <v-pagination
+          v-model="currentPage"
+          :length="Math.ceil(products.length / pageSize)"
+          class="mt-10"
+          rounded="circle"
+          @update:model-value="handlePageChange"
+          color="#589195"
+          size="60"
+        ></v-pagination>
+      </v-col>
     </v-container>
   </section>
 </template>

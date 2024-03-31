@@ -7,48 +7,66 @@ defineProps({
     required: true,
   },
 });
-
 const cart = useCartStore();
 const likes = useLikeStore();
 </script>
 
 <template>
   <v-card
-    min-height="100%"
-    style="
-      background-color: #ecf5f4;
-      border-radius: 20px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-        rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    "
+    elevation="10"
+    variant="tonal"
+    style="background-color: #ecf5f4"
+    rounded="xl"
   >
     <v-img
       class="d-flex justify-center"
       width="100%"
-      height="350"
+      height="250"
       :src="product.image"
       cover
     />
-    <v-card-text class="subtitle">{{ product.star }}</v-card-text>
-    <v-card-text class="subtitle">{{ product.title }}</v-card-text>
+    <v-card-title class="text-subtitle-1 pb-0">{{ product.star }}</v-card-title>
+    <v-card-title class="subtitle text-button py-0">{{
+      product.title
+    }}</v-card-title>
     <div class="d-flex align-center">
-      <v-card-text style="color: #589195; font-size: 20px; font-weight: 500"
-        >{{ product.price }}$</v-card-text
+      <v-card-title class="font-weight-bold text-h6 pb-0" style="color: #444f60"
+        >{{ product.price }}$</v-card-title
       ><slot class="align-self-start" name="count"></slot>
     </div>
-    <v-card-actions class="justify-center px-2">
+    <v-divider color="#4d5162"></v-divider>
+    <v-divider color="#4d5162"></v-divider>
+    <v-card-actions class="justify-space-evenly">
       <v-dialog
-        transition="dialog-top-transition"
-        width="500"
+        transition="dialog-bottom-transition"
+        width="700"
         align-self="center"
+        persistent
       >
         <template v-slot:activator="{ props }">
-          <v-btn class="btn" rounded="xl" v-bind="props">See more</v-btn>
+          <span>
+            <v-btn
+              class="btn"
+              elevation="5"
+              :ripple="false"
+              rounded
+              v-bind="props"
+              >See more</v-btn
+            >
+            <v-tooltip activator="parent" location="bottom" offset="20"
+              >Description about this Product</v-tooltip
+            >
+          </span>
         </template>
         <template v-slot:default="{ isActive }">
           <v-row justify="center" align="center">
             <v-col cols="12" md="7">
-              <v-card>
+              <v-card
+                variant="tonal"
+                style="background-color: #ecf5f4"
+                rounded="xl"
+                elevation="10"
+              >
                 <v-card-text class="px-10 bg-primary" color="#589195">
                   The Colors: 🔴⚫⚪🟤🟢🟣
                 </v-card-text>
@@ -79,17 +97,24 @@ const likes = useLikeStore();
         </template>
       </v-dialog>
       <v-btn
+        size="40"
+        variant="tonal"
+        elevation="5"
         class="btn-cart"
         color="#444f60"
-        icon="mdi-cart"
+        icon="mdi-cart-outline"
         @click="cart.addItem(product)"
-      ></v-btn>
+      />
       <v-btn
+        size="40"
+        variant="tonal"
+        elevation="5"
         class="btn-cart"
         color="#444f60"
-        icon="mdi-heart"
+        icon="mdi-heart-outline"
         @click="likes.addItem(product)"
-      ></v-btn>
+      />
+
       <slot name="actions" />
     </v-card-actions>
   </v-card>
@@ -99,7 +124,8 @@ const likes = useLikeStore();
   color: #589195 !important;
 }
 .btn:hover {
-  background-color: #589195;
+  background-color: #4db6ac !important;
+  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf !important;
 }
 .subtitle {
   color: #4d5162;

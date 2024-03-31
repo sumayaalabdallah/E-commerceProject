@@ -1,20 +1,20 @@
 <script setup>
 import ProductCard from "../components/productCard.vue";
-import { ref, reactive } from "vue";
-const products = ref([]);
+import { reactive } from "vue";
+// const products = ref([]);
 const data = reactive({
   products: [],
   productToShow: 8,
 });
-(async function dataFetcher() {
-  let response = await fetch("../../file.json");
-  products.value = await response.json();
-})();
-// fetch("../../file.json")
-//   .then((res) => res.json())
-//   .then((items) => {
-//     data.products = items;
-//   });
+// (async function dataFetcher() {
+//   let response = await fetch("../../file.json");
+//   products.value = await response.json();
+// })();
+fetch("../../file.json")
+  .then((res) => res.json())
+  .then((items) => {
+    data.products = items;
+  });
 const loadMoreProducts = () => {
   if (data.productToShow >= data.products.length) {
     return;
@@ -49,6 +49,10 @@ const loadMoreProducts = () => {
       >
         Showing our latest arrival on this summer
       </p>
+      <v-chip color="#589195" variant="outlined" class="mr-2">Clothes</v-chip>
+      <v-chip color="#589195" variant="outlined" class="mr-2">Bags</v-chip>
+      <v-chip color="#589195" variant="outlined" class="mr-2">Shoes</v-chip>
+      <v-chip color="#589195" variant="outlined">Watches</v-chip>
       <v-row class="my-4">
         <v-col
           v-for="product in data.products.slice(0, data.productToShow)"
@@ -81,5 +85,9 @@ const loadMoreProducts = () => {
   font-weight: 500;
   font-family: system-ui;
   padding: 0 1.1rem;
+}
+.btn:hover {
+  background-color: #4db6ac !important;
+  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf !important;
 }
 </style>

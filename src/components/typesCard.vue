@@ -3,9 +3,9 @@
   <section class="my-16">
     <v-container>
       <v-row justify="center">
-        <v-col cols="12" md="5" sm="6" class="man ma-1">
+        <v-col cols="12" md="6" sm="6" lg="4" class="man ma-1">
           <div class="content">
-            <span class="subtitle">Stay Upto Date</span>
+            <span class="subtitle">Stay Up to Date</span>
             <h3 class="title">Men’s Trendy Fashion</h3>
             <a href="#">
               <div class="link pt-3">
@@ -14,7 +14,7 @@
             </a>
           </div>
         </v-col>
-        <v-col cols="12" md="5" sm="6" class="woman ma-1">
+        <v-col cols="12" md="6" sm="6" lg="4" class="woman ma-1">
           <div class="content">
             <span class="subtitle">Get 40% Off</span>
             <h3 class="title">Women’s New Collection</h3>

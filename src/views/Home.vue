@@ -25,6 +25,7 @@ import slide2 from "../assets/photo_10.jpg";
 import slide3 from "../assets/photo_3.jpg";
 import slide4 from "../assets/photo_4.jpg";
 import slide5 from "../assets/photo_9.jpg";
+
 export default {
   components: {
     productsCard,
@@ -165,9 +166,8 @@ export default {
       class="d-flex flex-column fill-height justify-center align-center text-white"
     >
       <p
-        class="text-h3 font-weight-regular text-center mb-4"
+        class="font-weight-regular text-center mb-4 text-md-h3"
         style="
-          font-size: 3rem !important;
           color: #8d6e63 !important;
           background-color: #e4d9d3;
           border-radius: 50px;
@@ -176,8 +176,7 @@ export default {
           font-family: system-ui !important;
         "
       >
-        <span style="color: #5d4037; font-size: 3.3rem"> Welcome </span> To Our
-        Store
+        <span style="color: #5d4037"> {{ $t("message.hello") }} </span>
       </p>
     </div>
   </v-parallax>
@@ -199,9 +198,7 @@ export default {
             Fashionable Jeans
           </h3>
           <p class="subtitle pa-1 ma-10">
-            Get ready to elevate your style game with our exclusive selection of
-            clothing and accessories. Welcome aboard! Step into our virtual
-            wardrobe and discover the perfect look for every occasion
+            {{ $t("hero.subtitle") }}
           </p>
           <div
             style="display: flex; flex-wrap: wrap"
@@ -235,19 +232,31 @@ export default {
           </div>
         </v-col>
         <v-col lg="6" sm="6" cols="12">
-          <v-img src="../assets/person.png" width="500" height="600"></v-img>
+          <v-img
+            class="hero-img"
+            src="../assets/person.png"
+            width="500"
+            height="600"
+          ></v-img>
         </v-col>
       </v-row>
     </v-container>
   </section>
   <!-- Palestine section -->
   <section class="my-16 py-16">
-    <v-carousel cycle show-arrows="hover" hide-delimiters height="auto">
-      <v-carousel-item v-for="item in items" :key="item.id">
-        <v-container
-          class="my-6"
-          style="background-color: #ecf5f4; border-radius: 50px"
-        >
+    <v-container
+      class="my-6"
+      style="
+        background-color: #ecf5f4;
+        border-radius: 50px;
+        border-radius: 50px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      "
+    >
+      <v-carousel cycle show-arrows="hover" hide-delimiters height="auto">
+        <v-carousel-item v-for="item in items" :key="item.id">
           <v-row no-gutters>
             <v-col cols="12" sm="6" lg="6">
               <v-img
@@ -282,9 +291,9 @@ export default {
               </v-btn>
             </v-col>
           </v-row>
-        </v-container>
-      </v-carousel-item>
-    </v-carousel>
+        </v-carousel-item>
+      </v-carousel>
+    </v-container>
   </section>
   <!-- Types Section -->
   <typesCard></typesCard>
@@ -307,24 +316,21 @@ export default {
         Our Team
       </h1>
       <v-row>
-        <v-col cols="12" md="3" sm="6" v-for="t in teams" :key="t.id">
-          <a href="">
+        <v-col cols="12" sm="6" md="3" v-for="t in teams" :key="t.id">
+          <v-hover v-slot="{ isHovering, props }" open-delay="300">
             <v-card
+              v-bind="props"
+              :elevation="isHovering ? 10 : 5"
+              :color="isHovering ? 'grey-lighten-4' : 'light-blue-lighten-5'"
               class="a-link"
-              style="background-color: #ecf5f4"
-              max-width="300"
+              rounded="xl"
             >
-              <v-img
-                class="align-end text-white"
-                height="300"
-                width="500"
-                :src="t.img"
-                cover
-              >
-              </v-img>
-              <v-card-title class="full-name">{{ t.fullName }}</v-card-title>
-              <v-card-text class="role">{{ t.role }}</v-card-text>
-              <v-card-actions>
+              <v-img class="align-end text-white" :src="t.img" cover> </v-img>
+              <v-card-title class="full-name text-center">{{
+                t.fullName
+              }}</v-card-title>
+              <v-card-text class="role text-center">{{ t.role }}</v-card-text>
+              <v-card-actions class="justify-center">
                 <a
                   href="https://www.linkedin.com/in/sumaya-alabdallah-4aa51b276"
                 >
@@ -354,7 +360,7 @@ export default {
                 </a>
               </v-card-actions>
             </v-card>
-          </a>
+          </v-hover>
         </v-col>
       </v-row>
     </v-container>
@@ -374,35 +380,50 @@ export default {
       >
         What Customers Say About Us
       </h1>
-      <v-row>
-        <v-col cols="12" sm="6" lg="4" v-for="card in cards" :key="card.id">
-          <TestimonialCard>
-            <v-card-text class="text">
-              Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc
-              minim appetere te usu, ea case duis scribentur has. Duo te
-              consequat elaboraret, has quando suavitate at.
-            </v-card-text>
 
-            <template v-slot:img
-              ><v-img
-                style="display: block; border-radius: 50%"
-                height="150"
-                width="150"
-                :src="card.img"
-                cover
-              ></v-img>
-            </template>
-            <template v-slot:fullName>{{ card.fullName }} </template>
-            <template v-slot:role>{{ card.role }} </template>
-          </TestimonialCard>
-        </v-col>
-      </v-row>
+      <v-window
+        show-arrows
+        prev-icon="mdi-arrow-left"
+        next-icon="mdi-arrow-right"
+      >
+        <v-window-item v-for="card in cards" :key="card.id">
+          <v-row>
+            <v-col cols="12">
+              <TestimonialCard width="55%" class="mx-auto testimonial">
+                <template v-slot:img
+                  ><v-img
+                    style="border-radius: 50%; margin-left: 30px"
+                    height="230"
+                    width="230"
+                    :src="card.img"
+                    cover
+                  ></v-img>
+                </template>
+
+                <template v-slot:fullName>{{ card.fullName }} </template>
+                <template v-slot:role>{{ card.role }} </template>
+
+                <v-rating
+                  v-model="rating"
+                  class="ma-4"
+                  readonly
+                  color="#ffb400"
+                  half-increments
+                ></v-rating>
+              </TestimonialCard>
+            </v-col>
+          </v-row>
+        </v-window-item>
+      </v-window>
     </v-container>
   </section>
   <!-- Form Section -->
   <contactSection />
 </template>
 <style scoped>
+a {
+  text-decoration: none;
+}
 .link-color {
   color: white;
   font-weight: 500 !important;
@@ -413,9 +434,30 @@ export default {
   background-color: #589195;
 }
 .btn-sec:hover {
+  box-shadow: 0 0 0 #4db6acaf, 0 0 5px #4db6acaf, 0 0 10px #4db6acaf;
   background-color: #4db6ac !important;
-  transform: translateY(1rem);
   transition: all 0.3s ease-in-out;
+}
+.hero-img {
+  animation: move 1s infinite;
+  cursor: pointer;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(7px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  75% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .title {
   color: #34394c;
@@ -438,17 +480,12 @@ export default {
   transform: translateY(-5px);
   transition: all 0.3s ease-in-out;
 }
-a {
-  text-decoration: none;
-}
-a .a-link:hover {
-  transform: scale(1.08);
+.a-link:hover {
+  transform: scale(1.05);
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
-.a-link {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  border-radius: 20px;
-}
+
 .full-name {
   color: #4a5556;
   font-size: 1.3rem;
@@ -458,5 +495,11 @@ a .a-link:hover {
   color: gray;
   font-size: 1rem;
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .testimonial {
+    width: 100% !important;
+  }
 }
 </style>

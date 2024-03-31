@@ -15,11 +15,12 @@ export default {
       has quando suavitate at.
     </v-card-text>
     <div class="author">
-      <v-img :src="img" width="150" height="150" alt=""
-        ><slot name="img"></slot
-      ></v-img>
+      <v-img :src="img"><slot name="img"></slot></v-img>
       <div>
-        <h5 class="my-2" style="color: #e3f2fd; font-size: 1.3rem">
+        <h5
+          class="my-2"
+          style="color: #e3f2fd; font-size: 1.7rem; margin-right: 50px"
+        >
           <slot name="fullName"></slot>
         </h5>
         <p style="color: #90caf9; font-size: 1.1rem; opacity: 0.6">
@@ -38,9 +39,9 @@ export default {
 </template>
 <style scoped>
 .text {
-  font-size: 1.25rem !important;
+  font-size: 1.5rem !important;
   font-weight: 400 !important;
-  line-height: 27px;
+  line-height: 30px;
   opacity: 0.7;
   color: beige !important;
 }
@@ -49,9 +50,9 @@ export default {
   content: "\201D";
   display: block;
   position: absolute;
-  top: 16px;
-  left: 16px;
-  font-size: 30px;
+  top: 30px;
+  left: 30px;
+  font-size: 50px;
   color: #bbdefb;
 }
 .author {
@@ -64,9 +65,9 @@ export default {
   padding: 2rem;
   border-radius: 30px;
 }
-@media (max-width: 310px) {
+@media (max-width: 597px) {
   .author {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
 }
 </style>
