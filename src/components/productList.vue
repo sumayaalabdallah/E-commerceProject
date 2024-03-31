@@ -22,6 +22,7 @@ const paginatedProducts = computed(() => {
 //   .then((items) => {
 //     products.value = items;
 //   });
+
 products.value = productsValues;
 </script>
 
