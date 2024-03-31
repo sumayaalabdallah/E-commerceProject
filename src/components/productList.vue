@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import ProductCard from "@/components/productCard.vue";
-import productsValues from "@/file.json";
+// import productsValues from "@/file.json";
 const products = ref([]);
 const currentPage = ref(1);
 const pageSize = 8;
@@ -17,13 +17,13 @@ const paginatedProducts = computed(() => {
 //   let response = await fetch("../../file.json");
 //   products.value = await response.json();
 // })();
-// fetch("../../file.json")
-//   .then((res) => res.json())
-//   .then((items) => {
-//     products.value = items;
-//   });
+fetch("../../public/file.json")
+  .then((res) => res.json())
+  .then((items) => {
+    products.value = items;
+  });
 
-products.value = productsValues;
+// products.value = productsValues;
 </script>
 <template>
   <section class="my-16">
