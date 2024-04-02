@@ -46,7 +46,7 @@ export default {
     <v-container>
       <h1
         style="
-          color: #34394c;
+          color: #589195;
           font-family: system-ui;
           font-weight: 500;
           font-size: 40px;

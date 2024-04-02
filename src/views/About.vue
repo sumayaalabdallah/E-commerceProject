@@ -77,7 +77,7 @@ export default {
     <v-container>
       <h1
         style="
-          color: #34394c;
+          color: #589195;
           font-family: system-ui;
           font-weight: 500;
           font-size: 40px;
@@ -185,9 +185,14 @@ export default {
   </section>
   <section class="my-16" id="hero">
     <v-container>
-      <p class="text-center my-16">Showing our latest arrival on this summer</p>
+      <p
+        style="color: #589195; font-family: system-ui; font-weight: 500"
+        class="text-center my-16"
+      >
+        Showing our latest arrival on this summer
+      </p>
       <v-row justify="center">
-        <v-col class="ma-1 card" cols="12" sm="6" lg="3">
+        <v-col class="ma-3 card" cols="12" sm="6" lg="3">
           <div>
             <h3 class="title1 text-center my-6">Get 40% Off</h3>
             <p class="text-center pb-3">Man’s Latest Collection</p>
@@ -300,6 +305,16 @@ p {
 }
 .free_shipping_content {
   display: flex;
+}
+.free_shipping_content:hover {
+  cursor: pointer;
+  background-color: #ecf5f4;
+  padding: 10px;
+  border-radius: 30px;
+  transition: all 0.1s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .free_shipping_text h3 {
   color: #6a6a6a;

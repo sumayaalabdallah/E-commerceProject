@@ -27,6 +27,8 @@
               label="Your Name"
               bg-color="#ecf5f4"
               color="#34394c"
+              variant="outlined"
+              rounded="xl"
               hide-details
             ></v-text-field>
           </v-col>
@@ -37,6 +39,8 @@
               label="Your Email"
               bg-color="#ecf5f4"
               color="#34394c"
+              variant="outlined"
+              rounded="xl"
               hide-details
             ></v-text-field>
           </v-col>
@@ -47,6 +51,8 @@
               label="Subject"
               bg-color="#ecf5f4"
               color="#34394c"
+              variant="outlined"
+              rounded="xl"
               hide-details
             ></v-text-field>
           </v-col>
@@ -56,7 +62,9 @@
               type="text"
               bg-color="#ecf5f4"
               color="#34394c"
+              variant="outlined"
               label="Message"
+              rounded="xl"
             ></v-textarea>
           </v-col>
           <v-col cols="12" md="7">
@@ -111,14 +119,23 @@
 </template>
 <style scoped>
 .btn {
-  font-size: 1.01rem;
+  background: linear-gradient(0deg, #79bbbf, #589195);
+  font-size: 18px;
   font-weight: 500;
   font-family: system-ui;
   padding: 0 1.1rem;
+  position: relative;
+  border: 1px solid #34394c;
+  color: #34394c !important;
 }
 .btn:hover {
-  background-color: #4db6ac !important;
-  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf !important;
+  background: linear-gradient(0deg, #8fc6c9, #77c7cd);
+  box-shadow: inset 0px 1px 0px 0px rgb(88, 145, 149, 0.4);
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 2px;
+}
+.btn:active {
+  top: 10px;
 }
 .social-icons li {
   margin-right: 2.5rem;
@@ -133,11 +150,11 @@ ul {
 }
 @keyframes sunshine {
   0% {
-    box-shadow: 0 0 0 0px rgb(60, 65, 83, 0.4);
+    box-shadow: 0 0 0 0px rgba(79, 153, 158, 0.4);
   }
 
   100% {
-    box-shadow: 0 0 0 20px rgb(60, 65, 83, 0);
+    box-shadow: 0 0 0 15px rgba(133, 195, 199, 0.4);
   }
 }
 </style>

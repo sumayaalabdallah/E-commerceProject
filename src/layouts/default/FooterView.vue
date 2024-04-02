@@ -1,7 +1,11 @@
 <script></script>
 <template>
   <section class="mt-16">
-    <v-footer class="mt-16" color="#ecf5f4">
+    <v-footer
+      class="mt-16"
+      color="#ecf5f4"
+      style="margin: 0 10px; border-radius: 30px"
+    >
       <v-container>
         <v-row no-gutters>
           <v-col cols="12" sm="6" lg="3" align-self="start">
@@ -107,6 +111,7 @@
 h1 {
   font-weight: 500;
   font-size: 24px;
+  color: #589195;
 }
 p,
 span {

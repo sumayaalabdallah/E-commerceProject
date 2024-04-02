@@ -2,7 +2,6 @@
 import { ref, computed } from "vue";
 import ProductCard from "@/components/productCard.vue";
 import { reactive } from "vue";
-// const products = ref([]);
 const data = reactive({
   products: [],
 });
@@ -16,11 +15,6 @@ const paginatedProducts = computed(() => {
   const end = currentPage.value * pageSize;
   return data.products.slice(start, end);
 });
-// fetch("../../file.json")
-//   .then((res) => res.json())
-//   .then((items) => {
-//     products.value = items;
-//   });
 fetch("../../file.json")
   .then((res) => res.json())
   .then((items) => {
@@ -32,7 +26,7 @@ fetch("../../file.json")
     <v-container>
       <h1
         style="
-          color: #34394c;
+          color: #589195;
           font-family: system-ui;
           font-weight: 500;
           font-size: 40px;

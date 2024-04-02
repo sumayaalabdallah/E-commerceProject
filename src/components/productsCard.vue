@@ -25,7 +25,7 @@ const loadMoreProducts = () => {
     <v-container>
       <h1
         style="
-          color: #34394c;
+          color: #589195;
           font-family: system-ui;
           font-weight: 500;
           font-size: 40px;
@@ -61,7 +61,6 @@ const loadMoreProducts = () => {
         </v-col>
         <v-col class="" cols="12" sm="6" lg="3">
           <v-btn
-            color="#589195"
             class="ma-2 btn"
             rounded="xl"
             size="large"
@@ -77,13 +76,22 @@ const loadMoreProducts = () => {
 </template>
 <style scoped>
 .btn {
+  background: linear-gradient(0deg, #79bbbf, #589195);
   font-size: 18px;
   font-weight: 500;
   font-family: system-ui;
   padding: 0 1.1rem;
+  position: relative;
+  border: 1px solid #34394c;
+  color: #34394c !important;
 }
 .btn:hover {
-  background-color: #4db6ac !important;
-  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf !important;
+  background: linear-gradient(0deg, #8fc6c9, #77c7cd);
+  box-shadow: inset 0px 1px 0px 0px rgb(88, 145, 149, 0.4);
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 2px;
+}
+.btn:active {
+  top: 10px;
 }
 </style>

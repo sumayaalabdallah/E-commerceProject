@@ -11,7 +11,11 @@ const messages = {
       contact:'Contact'
     },
     hero:{
-      subtitle:' Get ready to elevate your style with our exclusive selection of clothing.Welcome To Ulina! Step into our virtual wardrobe and discover the perfect look for every occasion.'
+      title1:'Ulina',
+      title2:'Fashion',
+      subtitle:' Get ready to elevate your style with our exclusive selection of clothing.Welcome To Ulina! Step into our virtual wardrobe and discover the perfect look for every occasion.',
+      btn1:'Read more',
+      btn2:' Buy Now'
     }
   },
   ar: {
@@ -25,7 +29,11 @@ const messages = {
       contact:'اتصل بنا'
     },
     hero:{
-      subtitle:'استعد للارتقاء بمظهرك مع مجموعتنا الحصرية من الملابس. مرحبا بكم في أولينا! ادخل إلى خزانة الملابس الافتراضية الخاصة بنا واكتشف المظهر المثالي لكل مناسبة'
+      title1:'أزياء',
+      title2:'أولينا',
+      subtitle:'استعد للارتقاء بمظهرك مع مجموعتنا الحصرية من الملابس. مرحبا بكم في أولينا! ادخل إلى خزانة الملابس الافتراضية الخاصة بنا واكتشف المظهر المثالي لكل مناسبة',
+      btn1:'اقرأ المزيد',
+      btn2:'اشتري الآن'
     }
   }
 }

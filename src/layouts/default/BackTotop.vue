@@ -31,9 +31,8 @@ export default {
 }
 .back-to-top:hover {
   color: #fff;
-  background: #4db6ac;
+  background: #589195;
   cursor: pointer;
-  box-shadow: 0 0 5px #4db6acaf, 0 0 10px #4db6acaf;
 }
 
 @media (max-width: 900px) {

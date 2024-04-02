@@ -194,8 +194,10 @@ export default {
       <v-row no-gutters>
         <v-col cols="12" sm="6" lg="6" align-self="center">
           <h3 class="title pb-8 ma-10">
-            <span style="color: #589195; font-size: 2.7rem">Ulina </span>
-            Fashionable Jeans
+            <span style="color: #589195; font-size: 2.7rem"
+              >{{ $t("hero.title1") }}
+            </span>
+            {{ $t("hero.title2") }}
           </h3>
           <p class="subtitle pa-1 ma-10">
             {{ $t("hero.subtitle") }}
@@ -205,29 +207,24 @@ export default {
             class="d-flex justify-start ma-10"
           >
             <v-btn
-              color="secondary"
-              class="btn-sec ma-3"
+              style="
+                background: linear-gradient(0deg, #79bbbf, #589195) !important;
+              "
+              class="btn-sec ma-1"
               rounded="xl"
               size="large"
             >
-              <router-link class="link-color" to="/About"
-                >Read more</router-link
-              ></v-btn
+              <router-link color="white" class="link-color" to="/About">{{
+                $t("hero.btn1")
+              }}</router-link></v-btn
             >
             <v-btn
-              color="secondary"
-              style="
-                color: white;
-                font-weight: 500 !important;
-                font-size: 19px !important;
-                font-family: system-ui !important;
-              "
               @click="scrollMethod"
-              class="btn-sec ma-3"
-              rounded="xl"
+              class="btn-sec ma-1"
               size="large"
+              rounded="xl"
             >
-              Buy Now
+              {{ $t("hero.btn2") }}
             </v-btn>
           </div>
         </v-col>
@@ -276,14 +273,8 @@ export default {
                 everything going on in Palestine . Gaza I’m praying for you.
               </h3>
               <v-btn
-                color="secondary"
-                style="
-                  color: white;
-                  font-weight: 500 !important;
-                  font-size: 19px !important;
-                  font-family: system-ui !important;
-                "
-                class="btn-sec ma-3"
+                style="background: linear-gradient(0deg, #79bbbf, #589195)"
+                class="btn-sec ma-8"
                 rounded="xl"
                 size="large"
               >
@@ -306,7 +297,7 @@ export default {
     <v-container>
       <h1
         style="
-          color: #34394c;
+          color: #589195;
           font-family: system-ui;
           font-weight: 500;
           font-size: 50px;
@@ -317,7 +308,7 @@ export default {
       </h1>
       <v-row>
         <v-col cols="12" sm="6" md="3" v-for="t in teams" :key="t.id">
-          <v-hover v-slot="{ isHovering, props }" open-delay="300">
+          <v-hover v-slot="{ isHovering, props }" open-delay="200">
             <v-card
               v-bind="props"
               :elevation="isHovering ? 10 : 5"
@@ -325,12 +316,13 @@ export default {
               class="a-link"
               rounded="xl"
             >
-              <v-img class="align-end text-white" :src="t.img" cover> </v-img>
+              <v-img class="img align-end text-white" :src="t.img" cover>
+              </v-img>
               <v-card-title class="full-name text-center">{{
                 t.fullName
               }}</v-card-title>
               <v-card-text class="role text-center">{{ t.role }}</v-card-text>
-              <v-card-actions class="justify-center">
+              <v-card-actions class="card-social justify-center">
                 <a
                   href="https://www.linkedin.com/in/sumaya-alabdallah-4aa51b276"
                 >
@@ -370,7 +362,7 @@ export default {
     <v-container>
       <h1
         style="
-          color: #34394c;
+          color: #589195;
 
           font-family: system-ui;
           font-weight: 500;
@@ -425,18 +417,27 @@ a {
   text-decoration: none;
 }
 .link-color {
-  color: white;
-  font-weight: 500 !important;
+  color: #34394c;
+}
+.btn-sec {
+  background: #b2b0b1;
+  position: relative;
+  border: 1px solid #34394c;
+  border-bottom: 3px solid #34394c;
+  color: #34394c !important;
+  font-weight: 600 !important;
   font-size: 19px !important;
   font-family: system-ui !important;
 }
-.btn-sec {
-  background-color: #589195;
-}
 .btn-sec:hover {
-  box-shadow: 0 0 0 #4db6acaf, 0 0 5px #4db6acaf, 0 0 10px #4db6acaf;
-  background-color: #4db6ac !important;
+  background: linear-gradient(0deg, #8fc6c9, #77c7cd);
+  box-shadow: inset 0px 1px 0px 0px rgb(88, 145, 149, 0.4);
   transition: all 0.3s ease-in-out;
+  letter-spacing: 3px;
+}
+.btn-sec:active {
+  top: 10px;
+  border-bottom: 1px solid rgb(50, 50, 50);
 }
 .hero-img {
   animation: move 1s infinite;
@@ -475,17 +476,29 @@ a {
   line-height: 2;
   color: #34394c;
 }
+.card-social {
+  opacity: 0;
+}
 .btn:hover {
   color: #4db6ac !important;
   transform: translateY(-5px);
   transition: all 0.3s ease-in-out;
 }
-.a-link:hover {
+.a-link:hover .img {
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
-
+.a-link:hover .card-social {
+  cursor: pointer;
+  transform: translate(0, -20%);
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+.a-link:hover {
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  cursor: pointer;
+  background: #e0e0e0;
+}
 .full-name {
   color: #4a5556;
   font-size: 1.3rem;
@@ -496,7 +509,6 @@ a {
   font-size: 1rem;
   font-weight: 500;
 }
-
 @media (max-width: 900px) {
   .testimonial {
     width: 100% !important;
