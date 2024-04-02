@@ -96,7 +96,6 @@ const likes = useLikeStore();
           </v-row>
         </template>
       </v-dialog>
-
       <v-btn
         size="40"
         variant="tonal"
