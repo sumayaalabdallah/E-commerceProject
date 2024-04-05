@@ -42,7 +42,7 @@ export default {
 };
 </script>
 <template>
-  <section class="my-16">
+  <section class="py-5">
     <v-container>
       <h1
         style="
@@ -76,6 +76,7 @@ export default {
                 height="250"
                 width="100%"
                 :src="r.img"
+                alt="category-img"
                 cover
               >
               </v-img>

@@ -10,9 +10,9 @@ export default {
 };
 </script>
 <template>
-  <a class="back-to-top" @click="scrollMethod">
+  <button class="back-to-top" @click="scrollMethod">
     <i class="fa-solid fa-angle-up fa-sm"></i>
-  </a>
+  </button>
 </template>
 <style scoped>
 .back-to-top {

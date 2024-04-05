@@ -6,7 +6,7 @@ const likes = useLikeStore();
 const products = computed(() => likes.items);
 </script>
 <template>
-  <section class="my-10" id="home">
+  <section class="py-5" id="home">
     <VContainer>
       <VRow>
         <VCol

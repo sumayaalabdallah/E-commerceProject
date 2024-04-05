@@ -22,7 +22,7 @@ fetch("../../file.json")
   });
 </script>
 <template>
-  <section class="my-16">
+  <section class="py-5">
     <v-container>
       <h1
         style="

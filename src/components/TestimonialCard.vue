@@ -15,7 +15,7 @@ export default {
       has quando suavitate at.
     </v-card-text>
     <div class="author">
-      <v-img :src="img"><slot name="img"></slot></v-img>
+      <v-img :src="img" alt="testimonial-img"><slot name="img"></slot></v-img>
       <div>
         <h5
           class="my-2"

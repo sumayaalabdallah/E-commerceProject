@@ -4,39 +4,39 @@
       color="blue-grey-lighten-2"
       @click="drawer = !drawer"
     ></v-app-bar-nav-icon>
-
-    <div class="icons d-flex justify-end">
-      <v-btn to="/Cart" icon color="#589195">
-        <v-badge
-          location="right top"
-          :content="counter"
-          color="blue-grey-lighten-2"
-          offset-x="-5"
-        >
-          <v-icon>mdi-cart</v-icon>
-        </v-badge>
-      </v-btn>
-      <v-btn to="/Likes" icon color="#589195">
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-      <v-btn icon color="#589195" @click="changeLocale"
-        ><v-icon>{{
-          this.$vuetify.locale.current === "ar"
-            ? "mdi mdi-abjad-arabic"
-            : "mdi mdi-alphabetical-variant"
-        }}</v-icon></v-btn
+    <!-- <div class="icons d-flex justify-end"> -->
+    <v-btn to="/Cart" icon color="#589195">
+      <v-badge
+        location="right top"
+        :content="counter"
+        color="blue-grey-lighten-2"
+        offset-x="-5"
       >
-      <v-btn icon color="#589195" @click="toggleTheme()"
-        ><v-icon>mdi mdi-brightness-4 </v-icon></v-btn
-      >
-    </div>
-    <v-spacer></v-spacer>
-    <img
-      class="logo mx-10"
-      src="../../assets/download.png"
-      width="150"
-      alt="logo"
-    />
+        <v-icon>mdi-cart</v-icon>
+      </v-badge>
+    </v-btn>
+    <v-btn to="/Likes" icon color="#589195">
+      <v-icon>mdi-heart</v-icon>
+    </v-btn>
+    <v-btn icon color="#589195" @click="changeLocale"
+      ><v-icon>{{
+        this.$vuetify.locale.current === "ar"
+          ? "mdi mdi-abjad-arabic"
+          : "mdi mdi-alphabetical-variant"
+      }}</v-icon></v-btn
+    >
+    <v-btn icon color="#589195" @click="toggleTheme()"
+      ><v-icon>mdi mdi-brightness-4 </v-icon></v-btn
+    >
+    <!-- <v-spacer></v-spacer> -->
+    <template v-slot:append>
+      <img
+        class="logo mx-4"
+        src="../../assets/download.png"
+        width="150"
+        alt="logo-img"
+      />
+    </template>
   </v-app-bar>
   <v-navigation-drawer style="padding: 20px 0" v-model="drawer">
     <v-list nav>
@@ -124,12 +124,12 @@ export default {
     margin-left: 2px !important;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 335px) {
   .logo {
     width: 60px;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 323px) {
   .logo {
     width: 40px;
   }

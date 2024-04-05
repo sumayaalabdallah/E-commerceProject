@@ -8,7 +8,7 @@ export default {
 <template>
   <a href="#">
     <div class="a-link">
-      <v-img :src="img"><slot name="img"></slot></v-img>
+      <v-img :src="img" alt="category-img"><slot name="img"></slot></v-img>
       <div>
         <h5 class="my-2 text-center" style="color: #589195; font-size: 1.5rem">
           <slot name="fullName"></slot>

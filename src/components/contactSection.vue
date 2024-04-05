@@ -1,6 +1,6 @@
 <script></script>
 <template>
-  <section class="pt-16" id="contact">
+  <section class="py-5" id="contact">
     <v-container>
       <v-row>
         <v-col>
@@ -78,38 +78,26 @@
     <v-container class="mt-10">
       <v-row>
         <v-col cols="12">
-          <ul class="social-icons py-1 d-flex justify-center">
+          <ul class="social-icons d-flex justify-center align-center">
             <li>
-              <a href="https://github.com/sumayaalabdallah">
-                <v-btn icon color="#d0d8d7">
-                  <v-icon size="2.5rem" color="#4a5556"> mdi-github </v-icon>
-                </v-btn>
-              </a>
+              <v-btn icon color="#d0d8d7">
+                <v-icon size="2.5rem" color="#4a5556"> mdi-github </v-icon>
+              </v-btn>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/sumaya-alabdallah-4aa51b276">
-                <v-btn icon color="#d0d8d7">
-                  <v-icon size="2.5rem" color="#4a5556"> mdi-linkedin </v-icon>
-                </v-btn>
-              </a>
+              <v-btn icon color="#d0d8d7">
+                <v-icon size="2.5rem" color="#4a5556"> mdi-linkedin </v-icon>
+              </v-btn>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com/somya.alabdllah.3?mibextid=D4KYlr"
-              >
-                <v-btn icon color="#d0d8d7">
-                  <v-icon size="2.5rem" color="#4a5556"> mdi-facebook </v-icon>
-                </v-btn>
-              </a>
+              <v-btn icon color="#d0d8d7">
+                <v-icon size="2.5rem" color="#4a5556"> mdi-facebook </v-icon>
+              </v-btn>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com/somya.alabdllah.3?mibextid=D4KYlr"
-              >
-                <v-btn icon color="#d0d8d7">
-                  <v-icon size="2.5rem" color="#4a5556"> mdi-twitter </v-icon>
-                </v-btn>
-              </a>
+              <v-btn icon color="#d0d8d7">
+                <v-icon size="2.5rem" color="#4a5556"> mdi-twitter </v-icon>
+              </v-btn>
             </li>
           </ul>
         </v-col>
@@ -138,16 +126,14 @@
   top: 10px;
 }
 .social-icons li {
-  margin-right: 2.5rem;
   border-radius: 50%;
   animation: sunshine 3s infinite;
+  margin: 20px;
 }
 ul {
   list-style-type: none;
 }
-.social-icons a :hover {
-  color: #3c4153 !important;
-}
+
 @keyframes sunshine {
   0% {
     box-shadow: 0 0 0 0px rgba(79, 153, 158, 0.4);

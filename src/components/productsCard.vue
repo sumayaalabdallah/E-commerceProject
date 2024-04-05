@@ -21,7 +21,7 @@ const loadMoreProducts = () => {
 </script>
 
 <template>
-  <section class="pt-16">
+  <section class="py-5">
     <v-container>
       <h1
         style="

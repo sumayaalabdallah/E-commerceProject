@@ -13,36 +13,28 @@
               src="../../assets/download.png"
               width="150"
               height="50"
+              alt="footer-img"
             ></v-img>
             <p class="py-10">
               Quis nostrud exercitatin ullamc boris nisi ut aliquip ex ea
               commodo conse.
             </p>
-            <div class="py-1">
-              <a href="https://github.com/sumayaalabdallah">
-                <v-btn icon color="white">
-                  <v-icon size="1.5rem" color="#4a5556"> mdi-github </v-icon>
-                </v-btn>
-              </a>
-              <a href="https://www.linkedin.com/in/sumaya-alabdallah-4aa51b276">
-                <v-btn class="mx-3" icon color="white">
-                  <v-icon size="1.5rem" color="#4a5556"> mdi-linkedin </v-icon>
-                </v-btn>
-              </a>
-              <a
-                href="https://www.facebook.com/somya.alabdllah.3?mibextid=D4KYlr"
-              >
-                <v-btn icon color="white">
-                  <v-icon size="1.5rem" color="#4a5556"> mdi-facebook </v-icon>
-                </v-btn>
-              </a>
-              <a
-                href="https://www.facebook.com/somya.alabdllah.3?mibextid=D4KYlr"
-              >
-                <v-btn class="mx-3" icon color="white">
-                  <v-icon size="1.5rem" color="#4a5556"> mdi-twitter </v-icon>
-                </v-btn>
-              </a>
+            <div class="py-1 d-flex justify-space-evenly align-start">
+              <v-btn icon color="white">
+                <v-icon size="1.5rem" color="#4a5556"> mdi-github </v-icon>
+              </v-btn>
+
+              <v-btn icon color="white">
+                <v-icon size="1.5rem" color="#4a5556"> mdi-linkedin </v-icon>
+              </v-btn>
+
+              <v-btn icon color="white">
+                <v-icon size="1.5rem" color="#4a5556"> mdi-facebook </v-icon>
+              </v-btn>
+
+              <v-btn icon color="white">
+                <v-icon size="1.5rem" color="#4a5556"> mdi-twitter </v-icon>
+              </v-btn>
             </div>
           </v-col>
           <v-col cols="12" sm="6" lg="3" align-self="start">

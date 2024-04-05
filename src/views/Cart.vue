@@ -6,7 +6,7 @@ const products = computed(() => cart.items);
 </script>
 
 <template>
-  <section class="mt-10" id="home">
+  <section class="py-5" id="home">
     <v-container>
       <v-row>
         <v-col cols="12">
@@ -37,6 +37,7 @@ const products = computed(() => cart.items);
                     width="150"
                     height="150"
                     :src="product.image"
+                    alt="cart-img"
                     cover
                   />
                 </td>

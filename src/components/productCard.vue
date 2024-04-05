@@ -23,6 +23,7 @@ const likes = useLikeStore();
       width="100%"
       height="250"
       :src="product.image"
+      alt="product-img"
       cover
     />
     <v-card-title class="text-subtitle-1 pb-0">{{ product.star }}</v-card-title>
@@ -76,6 +77,7 @@ const likes = useLikeStore();
                   :src="product.image"
                   width="400"
                   max-height="350"
+                  alt="description-img"
                   cover
                 />
                 <v-card-text class="subtitle text-center">{{

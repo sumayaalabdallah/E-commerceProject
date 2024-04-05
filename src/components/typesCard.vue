@@ -1,6 +1,6 @@
 <script></script>
 <template>
-  <section class="my-16">
+  <section class="py-5">
     <v-container>
       <v-row justify="center">
         <v-col cols="12" md="6" sm="6" lg="4" class="man ma-1">

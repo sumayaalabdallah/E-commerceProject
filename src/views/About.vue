@@ -38,7 +38,7 @@ export default {
 };
 </script>
 <template>
-  <section class="my-6" id="home">
+  <section class="py-5" id="home">
     <v-carousel
       cycle
       show-arrows="hover"
@@ -52,8 +52,8 @@ export default {
           style="background-color: #ecf5f4; border-radius: 50px"
         >
           <v-row no-gutters>
-            <v-col cols="12" sm="6" lg="6" align-self="end" class="">
-              <h3 class="title pa-6">summer sales is on</h3>
+            <v-col cols="12" sm="6" lg="6" align-self="end">
+              <h3 class="title">summer sales is on</h3>
               <p class="subtitle">{{ s.subtitle }}</p>
               <v-btn
                 color="#589195"
@@ -66,14 +66,20 @@ export default {
               </v-btn>
             </v-col>
             <v-col cols="12" sm="6" lg="6">
-              <v-img :src="s.img" width="450" height="550"></v-img>
+              <v-img
+                :src="s.img"
+                alt="about-img"
+                width="500"
+                height="500"
+              ></v-img>
             </v-col>
           </v-row>
         </v-container>
       </v-carousel-item>
     </v-carousel>
   </section>
-  <section class="py-16">
+  <!-- Services Section -->
+  <section class="py-5">
     <v-container>
       <h1
         style="
@@ -82,7 +88,7 @@ export default {
           font-weight: 500;
           font-size: 40px;
         "
-        class="text-left mb-16"
+        class="text-center my-5"
       >
         Our Services
       </h1>
@@ -183,11 +189,11 @@ export default {
       </v-row>
     </v-container>
   </section>
-  <section class="my-16" id="hero">
+  <section class="py-5" id="hero">
     <v-container>
       <p
         style="color: #589195; font-family: system-ui; font-weight: 500"
-        class="text-center my-16"
+        class="text-center my-5"
       >
         Showing our latest arrival on this summer
       </p>
@@ -202,6 +208,7 @@ export default {
             src="../assets/random1.png"
             width="200"
             height="325"
+            alt="part1-img"
             cover
           />
         </v-col>
@@ -210,7 +217,13 @@ export default {
             <h3 class="title1 my-6 text-center">Couple Fashion</h3>
             <p class="text-center pb-3">Best Collection for Stylish Couple</p>
           </div>
-          <img src="../assets/random2.png" width="250" height="300" cover />
+          <img
+            src="../assets/random2.png"
+            width="250"
+            height="300"
+            alt="part2-img"
+            cover
+          />
         </v-col>
         <v-col class="ma-1 card" cols="12" sm="6" lg="3">
           <div>
@@ -222,11 +235,12 @@ export default {
             src="../assets/random3.png"
             width="225"
             height="325"
+            alt="part3-img"
             cover
           />
         </v-col>
         <v-col class="ma-1 card" cols="12" sm="6" lg="3">
-          <img src="../assets/random4.png" width="175" />
+          <img src="../assets/random4.png" alt="part4-img" width="175" />
           <div>
             <p class="text-center">Exclusive Shoes Collection</p>
           </div>
@@ -239,11 +253,12 @@ export default {
           <img
             class="pt-16 mt-16 ma-9"
             src="../assets/random5.png"
+            alt="part5-img"
             width="200"
           />
         </v-col>
         <v-col class="ma-1 card" cols="12" sm="6" lg="3">
-          <img src="../assets/random6.png" width="200" />
+          <img src="../assets/random6.png" alt="part6-img" width="200" />
           <div>
             <h3 class="title1 my-6 text-center">Couple Fashion</h3>
             <p class="text-center pb-3">Best Collection for Stylish Couple</p>
@@ -263,8 +278,9 @@ export default {
   text-transform: uppercase;
 }
 .subtitle {
+  font-family: system-ui;
   color: #34394c;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .btn {
@@ -305,6 +321,7 @@ p {
 }
 .free_shipping_content {
   display: flex;
+  gap: 10px;
 }
 .free_shipping_content:hover {
   cursor: pointer;
