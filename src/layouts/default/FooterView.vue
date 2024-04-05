@@ -21,19 +21,19 @@
             </p>
             <div class="py-1 d-flex justify-space-evenly align-start">
               <v-btn icon color="white">
-                <v-icon size="1.5rem" color="#4a5556"> mdi-github </v-icon>
+                <v-icon size="1.5rem" color="#589195"> mdi-github </v-icon>
               </v-btn>
 
               <v-btn icon color="white">
-                <v-icon size="1.5rem" color="#4a5556"> mdi-linkedin </v-icon>
+                <v-icon size="1.5rem" color="#589195"> mdi-linkedin </v-icon>
               </v-btn>
 
               <v-btn icon color="white">
-                <v-icon size="1.5rem" color="#4a5556"> mdi-facebook </v-icon>
+                <v-icon size="1.5rem" color="#589195"> mdi-facebook </v-icon>
               </v-btn>
 
               <v-btn icon color="white">
-                <v-icon size="1.5rem" color="#4a5556"> mdi-twitter </v-icon>
+                <v-icon size="1.5rem" color="#589195"> mdi-twitter </v-icon>
               </v-btn>
             </div>
           </v-col>
@@ -41,19 +41,23 @@
             <ul>
               <h1 class="ml-4">Address</h1>
               <li>
-                <v-icon size="1.5rem" class="mx-2">mdi-map-marker</v-icon
+                <v-icon size="1.5rem" color="#589195" class="mx-2"
+                  >mdi-map-marker</v-icon
                 ><span>20, Awesome Road, New York</span>
               </li>
               <li>
-                <v-icon size="1.5rem" class="mx-2">mdi-phone</v-icon
+                <v-icon size="1.5rem" color="#589195" class="mx-2"
+                  >mdi-phone</v-icon
                 ><span>+123 456 7890</span>
               </li>
               <li>
-                <v-icon size="1.5rem" class="mx-2">mdi-email</v-icon
+                <v-icon size="1.5rem" color="#589195" class="mx-2"
+                  >mdi-email</v-icon
                 ><span>hello@ulina.com</span>
               </li>
               <li>
-                <v-icon size="1.5rem" class="mx-2">mdi-whatsapp</v-icon
+                <v-icon size="1.5rem" color="#589195" class="mx-2"
+                  >mdi-whatsapp</v-icon
                 ><span>+321 654 9870</span>
               </li>
             </ul>
