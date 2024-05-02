@@ -2,13 +2,14 @@
 <template>
   <!-- Parallax Section -->
   <v-parallax
-    height="auto"
+    height="100vh"
+    class="mt-0 pt-0"
     src="../assets/cover2.jpg"
     alt="Parallax-img"
     id="home"
   >
     <div
-      class="d-flex flex-column fill-height justify-center align-center text-white"
+      class="d-flex flex-column fill-height justify-center align-center text-white ma-0 pa-0"
     >
       <p
         class="font-weight-regular text-center mb-4 text-md-h3"
